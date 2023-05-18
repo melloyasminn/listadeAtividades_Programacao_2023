@@ -5,10 +5,41 @@
     */
 
     //ENTRADA
-
-    
+    const n1 = Number(prompt(`Informe um número`).trim())
+    const n2 = Number (prompt(`Informe outro número`).trim())
+    const n3 = Number (prompt(`Informe outro número`).trim())
     //PROCESSAMENTO
-    
+    if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+        alert(`Informe apenas números`)
+    }
+
+    else if (n1 === n2 || n1 === n3 || n2 === n3) {
+        alert(`Algum dos valores são iguais, informe apenas números diferentes`)
+    }
+
+    else if ( n1 > n2 && n2 > n3) {
+        alert(`Os números em ordem decrescente são: ${n1}, ${n2}, ${n3}`)
+    }
+
+    else if (n1 > n3 && n3 > n2) {
+        alert(`Os números em ordem decrescente são: ${n1}, ${n3}, ${n2}`)
+    }
+
+    else if (n2 > n1 && n1 > n3) {
+        alert(`Os números em ordem descrescente são: ${n2}, ${n1}, ${n3}`)
+    }
+
+    else if (n2 > n3 && n3>n1) {
+        alert(`Os núemros em ordem decrescente são: ${n2}, ${n3}, ${n1}` )
+    }
+
+    else if (n3 > n1 && n1 > n2) {
+        alert(`Os numeros em ordem decrescente são: ${n3}, ${n1}, ${n2}`)
+    }
+
+    else {
+        alert(`Os números em ordem aleatória são: ${n3}, ${n2}, ${n1}`)
+    }
     //SAÍDA
     
 </script>

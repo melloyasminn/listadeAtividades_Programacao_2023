@@ -6,10 +6,24 @@
     */
 
     //ENTRADA
-     const n1 = Number(prompt )
+    let n1 = Number(prompt(`Informe um número inteiro`).trim())
+    let n2 = Number(prompt(`Informe outro número inteiro diferente`).trim())
+
     //PROCESSAMENTO
-
     //SAÍDA
+    if (isNaN(n1) || isNaN(n2)) {
+        alert(`Informe apenas NÚMEROS`)
+    }
 
-    
+    else if (n1 === n2) {
+        alert(`Informe dois números DIFERENTES`)
+    }
+
+    else {
+        const n3 = n1
+        n1 = n2
+        n2 = n3
+        alert(`O primeiro número inicialmente era ${n2}, agora é ${n1}. O valor do segundo número inicialmente era ${n1}, agora é ${n2}`)
+    }
+
 </script>
