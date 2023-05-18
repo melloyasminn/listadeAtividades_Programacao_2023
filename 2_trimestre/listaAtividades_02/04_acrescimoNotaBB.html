@@ -6,7 +6,7 @@
 const lbantes = Number(prompt (`Qual a nota inicial do little brother?`).trim().replace(",", "."))
 const lbdps = Number(prompt (`Qual a nota do little brother depois do auxílio do BB?`).trim().replace(",","."))
 const diferenca = lbdps - lbantes
-const acrescimo = diferenca * 0.25
+const acrescimo = (diferenca * 0.25).toFixed(1)
     // processamento
     if ( diferenca < 0 ) {
         alert(`O BIg Brother não receberá acréscimo em sua nota, já que a diferença entre as notas é negativa`)
