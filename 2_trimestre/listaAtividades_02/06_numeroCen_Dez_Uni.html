@@ -11,12 +11,20 @@
     */
 
     //ENTRADA
-
+    const n = Number(prompt(`informe um número menor que 1000`))
+    const unidade = (n%100)%10
+    const dezena = ((n%100)/ 10).toFixed(0)
+    const centena = (n/100).toFixed(0)
+    if (n >= 1000 || isNaN(n)) {
+        alert(`Valor inválido`)
+    }
 
     //PROCESSAMENTO
-
+    
     
     //SAÍDA
-
+    else {
+    alert(`O número ${n} decomposto tem ${centena} centena(s), ${dezena} dezena(s) e ${unidade} unidade(s)`)
+}
 
 </script>
