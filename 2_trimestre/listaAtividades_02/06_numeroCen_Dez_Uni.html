@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     //PROBLEMA
     Faça um script que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
     Observando os termos no plural a colocação do "e", da vírgula entre outros.
@@ -10,21 +10,111 @@
     Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
     */
 
-    //ENTRADA
-    const n = Number(prompt(`informe um número menor que 1000`))
-    const unidade = (n%100)%10 
-    const dezena = parseInt ((n%100) / 10 )
-    const centena = parseInt ((n/100))
-    if (n >= 1000 || isNaN(n)) {
-        alert(`Valor inválido`)
-    }
-   
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    else {
-    alert(`O número ${n} decomposto tem ${centena} centena(s), ${dezena} dezena(s) e ${unidade} unidade(s)`)
-}
+  //ENTRADA
+  const n = Number(prompt(`informe um número menor que 1000`));
+  const unidade = (n % 100) % 10;
+  const dezena = parseInt((n % 100) / 10);
+  const centena = parseInt(n / 100);
+  if (n >= 1000 || isNaN(n)) {
+    alert(`Valor inválido`);
+  }
 
+  //PROCESSAMENTO
+
+  //SAÍDA
+  else if (centena <= 0 && dezena <= 0 && unidade === 1) {
+    alert(`O número ${n} decomposto tem ${unidade} unidade`);
+  } else if (centena <= 0 && dezena <= 0 && unidade > 1) {
+    alert(`O número ${n} decomposto tem ${unidade} unidades`);
+  } else if (centena <= 0 && dezena === 1 && unidade <= 0) {
+    alert(`O número ${n} decomposto tem ${dezena} dezena`);
+  } else if (centena <= 0 && dezena > 1 && unidade <= 0) {
+    alert(`O número ${n} decomposto tem ${dezena} dezenas`);
+  } else if (centena === 1 && dezena <= 0 && unidade <= 0) {
+    alert(`O número ${n} decomposto tem ${centena} centena`);
+  } else if (centena > 1 && dezena <= 0 && unidade <= 0) {
+    alert(`O número ${n} decomposto tem ${centena} centenas`);
+  } else if (centena <= 0 && dezena === 1 && unidade === 1) {
+    alert(`O número ${n} decomposto tem ${dezena} dezena e ${unidade} unidade`);
+  } else if (centena <= 0 && dezena > 1 && unidade === 1) {
+    alert(
+      `O número ${n} decomposto tem ${dezena} dezenas e ${unidade} unidade`
+    );
+  } else if (centena <= 0 && dezena === 1 && unidade > 1) {
+    alert(
+      `O número ${n} decomposto tem ${dezena} dezena e ${unidade} unidades`
+    );
+  } else if (centena <= 0 && dezena > 1 && unidade > 1) {
+    alert(
+      `O número ${n} decomposto tem ${dezena} dezenas e ${unidade} unidades`
+    );
+  } else if (centena === 1 && dezena === 1 && unidade === 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centena, ${dezena} dezena e ${unidade} unidade`
+    );
+  } else if (centena === 1 && dezena === 1 && unidade > 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centena, ${dezena} dezena e ${unidade} unidades`
+    );
+  } else if (centena === 1 && dezena > 1 && unidade === 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centena, ${dezena} dezenas e ${unidade} unidade`
+    );
+  } else if (centena > 1 && dezena === 1 && unidade === 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centenas, ${dezena} dezena e ${unidade} unidade`
+    );
+  } else if (centena === 1 && dezena > 1 && unidade > 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centena, ${dezena} dezenas e ${unidade} unidades`
+    );
+  } else if (centena > 1 && dezena > 1 && unidade === 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centenas, ${dezena} dezenas e ${unidade} unidade`
+    );
+  } else if (centena > 1 && dezena === 1 && unidade > 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centenas, ${dezena} dezena e ${unidade} unidades`
+    );
+  } else if (centena > 1 && dezena > 1 && unidade > 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centenas, ${dezena} dezenas e ${unidade} unidades`
+    );
+  } else if (centena === 1 && dezena === 1 && unidade <= 0) {
+    alert(`O número ${n} decomposto tem ${centena} centena e ${dezena} dezena`);
+  } else if (centena === 1 && dezena > 1 && unidade <= 0) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centena e ${dezena} dezenas`
+    );
+  } else if (centena > 1 && dezena === 1 && unidade <= 0) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centenas e ${dezena} dezena`
+    );
+  } else if (centena > 1 && dezena > 1 && unidade <= 0) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centenas e ${dezena} dezenas`
+    );
+  } else if (centena > 1 && dezena <= 0 && unidade <= 0) {
+    alert(`O número ${n} decomposto tem ${centena} centenas`);
+  } else if (centena === 1 && dezena <= 0 && unidade === 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centena e ${unidade} unidade`
+    );
+  } else if (centena === 1 && dezena <= 0 && unidade > 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centena e ${unidade} unidades`
+    );
+  } else if (centena > 1 && dezena <= 0 && unidade === 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centenas e ${unidade} unidade`
+    );
+  } else if (centena > 1 && dezena <= 0 && unidade > 1) {
+    alert(
+      `O número ${n} decomposto tem ${centena} centenas e ${unidade} unidades`
+    );
+  } else {
+    alert(
+      `O número ${n} decomposto tem ${centena} centena(s), ${dezena} dezena(s) e ${unidade} unidade(s)`
+    );
+  }
 </script>
