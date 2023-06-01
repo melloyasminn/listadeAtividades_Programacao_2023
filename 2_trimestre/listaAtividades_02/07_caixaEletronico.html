@@ -8,10 +8,61 @@
     */
     //0,5 na prova: Eduardo de Oliveira
     //ENTRADA
-    const saque = Number(prompt(`Qual o valor do seu saque? entre  10 e 600 reais`))
+    let saque = Number(prompt(`Qual o valor do seu saque? entre  10 e 600 reais`))
     
-    //PROCESSAMENTO
+    let mensagemFinal = ` Para sacar a quantia de ${saque.toFixed(2)} o script fornece `
 
+
+    //PROCESSAMENTO
+    const notasCem = Math.floor(saque / 100);
+    saque = saque % 100;
+    const notasCinquenta = Math.floor(saque / 50);
+    saque = saque % 50;
+    const notasDez = Math.floor(saque / 10);
+    saque = saque % 10;
+    const notasCinco = Math.floor(saque / 5);
+    saque = saque % 5;
+    const notasUm = saque;
+
+
+
+    if (notasCem > 0) {
+        mensagemFinal = mensagemFinal + `${notasCem} notas de Cem`;
+    }
+    if (notasCinquenta > 0 || notasDez > 0 || notasCinco > 0 || notasUm > 0) {
+        if (notasCinquenta > 0) {
+            if (notasDez > 0 || notasCinco > 0 || notasUm > 0) {
+                mensagemFinal = mensagemFinal + `, `;
+            }
+            else {
+                mensagemFinal = mensagemFinal + ` e `;
+            }
+            mensagemFinal = mensagemFinal + `${notasCinquenta} nota de Cinquenta`;
+        }
+        if (notasDez > 0) {
+            if (notasCinco > 0 || notasUm > 0) {
+                mensagemFinal = mensagemFinal + `, `;
+            }
+            else {
+                mensagemFinal = mensagemFinal + ` e `;
+            }
+            mensagemFinal = mensagemFinal + `${notasDez} notas de Dez`;
+        }
+        if (notasCinco > 0) {
+            if (notasUm > 0) {
+                mensagemFinal = mensagemFinal + `, `;
+            }
+            else {
+                mensagemFinal = mensagemFinal + ` e `;
+            }
+            mensagemFinal = mensagemFinal + `${notasCinco} notas de Cinco`;
+        }
+        if (notasUm > 0) {
+            mensagemFinal = mensagemFinal + ` e ${notasUm} notas de Um`;
+        }
+    }
+
+    document.write(mensagemFinal);
     //SAÍDA
 
 </script>
