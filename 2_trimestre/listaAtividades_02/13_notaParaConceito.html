@@ -9,10 +9,31 @@
     // Entre 5.9 e zero            E
 
     // Entrada
-const nota = Number(prompt('Que nota você tirou?')
+const nota = Number(prompt('Que nota você tirou?').replace(",", "."))
 
-if (nota < 10 && nota >9)
+if (nota <= 10 && nota >=9) [
+    alert (`A`)
+]
     
+else if ( nota <= 8.9 && nota >= 8 ) {
+    alert(`B`)
+}
+
+else if ( nota <= 7.9 && nota >= 7 ) {
+    alert (`C`)
+}
+
+else if ( nota <= 6.9 && nota >= 6) {
+    alert (`D`)
+}
+
+else if ( nota <= 5.9 && nota >= 0 ) {
+    alert (`E`)
+}
+
+else {
+    alert(`Valor inválido`)
+}
     // Processamento
 
     
