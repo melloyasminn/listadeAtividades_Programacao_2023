@@ -8,12 +8,54 @@
     */
 
     //ENTRADA
-
-
+    const num1 = Number(prompt(`Informe um número`).trim().replace(",", "."))
+    const num2 = Number(prompt(`Informe outro número`).trim().replace(",", "."))
+    const operação = prompt(`Qual operação você deseja realizar? Responda com: "+" para soma, "-" para subtração, "*" para multiplicação ou "/" para divisão`).trim()
+    let resultado = 0
     //PROCESSAMENTO
+    if (operação == "+") {
+        resultado = num1 + num2
+    }
 
-    
+    else if (operação == "-") {
+        resultado = num1 - num2
+    }
+
+    else if (operação == "*") {
+        resultado = num1 * num2
+    }
+
+    else if (operação == "/") {
+        resultado = num1 / num2
+    }
+
+    else {
+        alert(`Resposta Inválida`);
+    }
     //SAÍDA
-
+    if (resultado % 2 == 0 && resultado >= 0 && Number.isInteger(resultado)) {
+        alert(`${resultado} ele é par, positivo e inteiro`)
+    }
+    else if (resultado % 2 == 0 && resultado >= 0 && !Number.isInteger(resultado)) {
+        alert(`${resultado} ele é par, positivo e decimal`)
+    }
+    else if (resultado % 2 == 0 && !resultado >= 0 && Number.isInteger(resultado)) {
+        alert(`${resultado} ele é par, negativo e inteiro`)
+    }
+    else if (resultado % 2 == 0 && !resultado >= 0 && !Number.isInteger(resultado)) {
+        alert(`${resultado} ele é par, negativo e decimal`)
+    }
+    else if (!resultado % 2 == 0 && resultado >= 0 && Number.isInteger(resultado)) {
+        alert(`${resultado} ele é ímpar, positivo e inteiro`)
+    }
+    else if (!resultado % 2 == 0 && resultado >= 0 && !Number.isInteger(resultado)) {
+        alert(`${resultado} ele é ímpar, positivo e decimal`)
+    }
+    else if (!resultado % 2 == 0 && !resultado >= 0 && Number.isInteger(resultado)) {
+        alert(`${resultado} ele é ímpar, negativo e inteiro`)
+    }
+    else if (!resultado % 2 == 0 && !resultado >= 0 && !Number.isInteger(resultado)) {
+        alert(`${resultado} ele é ímpar, negativo e decimal`)
+    }
 
 </script>
