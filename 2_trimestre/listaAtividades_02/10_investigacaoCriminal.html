@@ -11,9 +11,46 @@
     */
 
     //ENTRADA
+    const p1 = prompt("Telefonou para a vítima? Responda com S ou N!").toLowerCase().trim()
+    const p2 = prompt("Esteve no local do crime? Responda com S ou N!").toLowerCase().trim()
+    const p3 = prompt("Mora perto da vítima? Responda com S ou N!").toLowerCase().trim()
+    const p4 = prompt("Devia para a vítima? Responda com S ou N!").toLowerCase().trim()
+    const p5 = prompt("Já trabalhou com a vítima? Responda com S ou N!").toLowerCase().trim()
 
     //PROCESSAMENTO
+    let resposta = 0
+    if (p1 == "s" || p2 == "s" || p3 == "s" || p4 == "s" || p5 == "s" || p1 == "n" || p2 == "n" || p3 == "n" || p4 == "n" || p5 == "n") {
 
+        if (p1 == "s") {
+            resposta == resposta++
+        }
+        if (p2 == "s") {
+            resposta == resposta++
+        }
+        if (p3 == "s") {
+            resposta == resposta++
+        }
+        if (p4 == "s") {
+            resposta == resposta++
+        }
+        if (p5 == "s") {
+            resposta == resposta++
+        }
+        if (resposta == 2) {
+            alert(`Suspeito`);
+        }
+        else if (resposta == 3 || resposta == 4) {
+            alert(`Cúmplice`);
+        }
+        else if (resposta == 5) {
+            alert(`Assasino`);
+        }
+        else {
+            alert(`Inocente`);
+        }
+    }
     //SAÍDA
-
+    else {
+        alert(`Respostas inválidas`)
+    }
 </script>

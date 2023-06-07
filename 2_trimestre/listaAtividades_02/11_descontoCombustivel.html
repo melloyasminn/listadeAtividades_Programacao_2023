@@ -14,11 +14,37 @@
     */
 
     //ENTRADA
-
-
+    let litro = Number(prompt(`Quantos litros foram vendidos?`).trim())
+    const combustivel = prompt(`Qual o tipo de combustível? Responda "A" para álcool ou "G" para gasolina.`).trim()
+    let valor = 0
     //PROCESSAMENTO
+if (litro <= 20 && combustivel == "A") {
+    litro = litro - (litro*0.03)
+    valor = (litro * 6.10).toFixed(2)
+    alert(`Você pagará R$${valor}`)
+}
 
+else if (litro > 20 && combustivel == "A") {
+    litro = litro - (litro*0.05)
+    valor = (litro * 6.10).toFixed(2)
+    alert(`Você pagará R$${valor}`)
+}
+
+if (litro <= 20 && combustivel == "G") {
+    litro = litro - (litro*0.04)
+    valor = (litro * 6.50).toFixed(2)
+    alert(`Você pagará R$${valor}`)
+}
+
+else if (litro > 20 && combustivel == "G") {
+    litro = litro - (litro*0.06)
+    valor = (litro * 6.50).toFixed(2)
+    alert(`Você pagará R$${valor}`)
+}
     
+else {
+    alert(`Valor inválido`)
+}
     //SAÍDA
 
 
