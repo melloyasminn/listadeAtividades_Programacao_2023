@@ -7,10 +7,12 @@
         //- acima de 1500: aumento de 5 %
     
     // Entrada
-
-    
+const preco = Number(prompt(`Qual o preço do produto?`))
+let aumento = 0 
     // Processamento
-
+if (preco <= 280) {
+    aumento = preco + (preco * 0.2)
+}
     
     // Saída
 

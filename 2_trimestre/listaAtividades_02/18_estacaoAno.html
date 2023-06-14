@@ -6,11 +6,42 @@
     */
 
     //ENTRADA
-    const hemisferio = 
-
+    const hemisferio = prompt(`Em que hemisfério você está?  Responda "S" para sul e "N" para norte`).trim().toUpperCase()
+    const mes = prompt(`Em que mês você está?`).trim().toLowerCase()
+   
     //PROCESSAMENTO
+   if ((hemisferio == "N") && (mes == "julho" || mes == "agosto" || mes == "setembro")) {
+    alert (`Verão`)
+   }
 
+   else if ((hemisferio == "N") && (mes == "outubro" || mes == "novembro" || mes == "dezembro")) {
+    alert (`Outono`)
+   }
     
+   else if ((hemisferio == "N") && (mes == "janeiro" || mes == "fevereiro" || mes == "março")) {
+    alert (`Inverno`)
+   }
+
+   else if ((hemisferio == "N") && (mes == "abril" || mes == "maio" || mes == "junho")) {
+    alert (`Primavera`)
+   }
+
+  if ((hemisferio == "S") && (mes == "janeiro" || mes == "fevereiro" || mes == "março")) {
+    alert (`Verão`)
+   }
+
+   else if ((hemisferio == "S") && (mes == "abril" || mes == "maio" || mes == "junho")) {
+    alert (`Outono`)
+   }
+
+   if ((hemisferio == "S") && (mes == "julho" || mes == "agosto" || mes == "setembro")) {
+    alert (`Inverno`)
+   }
+
+   else if ((hemisferio == "S") && (mes == "outubro" || mes == "novembro" || mes == "dezembro")) {
+    alert (`Primavera`)
+   }
+
     //SAÍDA
 
 
