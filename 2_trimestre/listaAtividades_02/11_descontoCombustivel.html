@@ -15,7 +15,7 @@
 
     //ENTRADA
     let litro = Number(prompt(`Quantos litros foram vendidos?`).trim())
-    const combustivel = prompt(`Qual o tipo de combustível? Responda "A" para álcool ou "G" para gasolina.`).trim()
+    const combustivel = prompt(`Qual o tipo de combustível? Responda "A" para álcool ou "G" para gasolina.`).trim().toUpperCase()
     let valor = 0
     //PROCESSAMENTO
 if (litro <= 20 && combustivel == "A") {
