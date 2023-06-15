@@ -5,15 +5,27 @@
         //- até 700(inclusive): aumento de 15 %
         //- até 1500(inclusive): aumento de 10 %
         //- acima de 1500: aumento de 5 %
-    
     // Entrada
-const preco = Number(prompt(`Qual o preço do produto?`))
-let aumento = 0 
-    // Processamento
-if (preco <= 280) {
-    aumento = preco + (preco * 0.2)
-}
+ let preço = prompt("informe o preço atual:").trim().replace(",",".");
     
+    // Processamento
+    if (preço <= 280 && preço > 0){
+        preço = preço * 1.20
+    }
+    else if (preço > 280  && preço <= 700){
+        preço = preço * 1.15
+    }
+    else if (preço > 700 && preço <= 1500){
+        preço = preço * 1.1
+    }
+    else if(preço > 1500){
+        preço = preço * 1.05
+    }
+    else{
+        alert("Resposta invalida!");
+    }
+
     // Saída
+    alert(`O produto com aumento fica ${preço.toFixed(2).replace(".",",")}.`);
 
 </script>
